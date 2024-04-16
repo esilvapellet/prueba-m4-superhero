@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero 🦸🏻‍♂️</title>
+    <meta name="author" content="Esteban Silva" />
+    <meta name="description" content="Desafío Esteban Silva" />
+    <meta name="keywords" content="desafio, bootcamp, estudiante, frontend" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap js -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- canvas -->
+    <!-- <script defer src="https://cdn.canvasjs.com/canvasjs.min.js"></script> -->
+    <script defer src="https://cdn.canvasjs.com/ga/canvasjs.min.js"></script>
+    <!-- <script defer src="https://cdn.canvasjs.com/ga/canvasjs.stock.min.js"></script> -->
+    <!-- script propio -->
+    <script defer src="./assets/js/script.js"></script>
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- navbar menú -->
+    <nav class="navbar">
+        <div class="container d-flex justify-content-center">
+            <a class="navbar-brand text-white fs-1" href="#" style="text-decoration: none;">
+                <img src="./assets/img/sh2.png" alt="SuperHero" width="100px"> SuperHero
+            </a>
+        </div>
+    </nav>
+    <!-- fin navbar -->
+    <!-- header -->
+    <header class="text-center py-3">
+        <h1 class="text-center">Elige tu SuperHeroe Favorito</h1>
+        <h2 class="text-center subtitulo">¡ Para defender la ciudad ! 🌃</h2>
+    </header>
+    <!-- fin header -->
+    <main class="container">
+        <section id="portada">
+            <p class="textoPortada p-5 m-3"><strong class="parche fw-bold text-uppercase">¡La Ciudad está en <span style="text-decoration:line-through;">Peligro!</span></strong> 💥. El caos se desata cuando un hacker 👨🏻‍💻 amenaza con sumir a la ciudad en la oscuridad 🌃. Con el destino pendiendo de un hilo, <strong class="parche fst-italic">los ciudadanos claman por un héroe 🦸🏻‍♂️ que los salve</strong>. Pero, ¿quién responderá al llamado? 🤯. ¡TÚ tienes el poder de elegir al héroe adecuado para enfrentar esta crisis!. Explora nuestro catálogo de superhéroes 🦸🏼, entre las 732 opciones y elige sabiamente. <strong class="parche"><br>¡El destino de la ciudad está en tus manos! 🫡</strong></p>
+        </section>
+        <!-- loader -->
+
+        <!-- <div class="vader pt-5">
+            <div class="shadow"></div>
+            <div class="head">
+                <div class="helmet"><span class="left"></span><span class="right"></span></div>
+                <div class="eyes"><span class="left"></span><span class="right"></span></div><span class="grill"><span
+                        class="left"></span><span class="center"></span><span class="right"></span></span><span
+                    class="mask"><span class="top"></span><span class="left"></span><span class="center"></span><span
+                        class="right"></span></span><span class="line"></span>
+            </div>
+            <div class="torso"><span class="neck"><span class="left"></span><span class="center"></span><span
+                        class="right"></span><span class="bottom"></span></span><span class="belt"><span
+                        class="center"></span></span>
+                <div class="plate"><span class="red_top"></span><span class="red_center"></span><span
+                        class="red_bottom"></span><span class="blue"></span><span class="gray"></span></div>
+            </div>
+            <div class="hand left"><span class="hand"></span></div>
+            <div class="hand right animation-right"><span class="hand"></span></div>
+            <div class="legs"><span class="left"></span><span class="right"></span></div>
+            <div class="boots"><span class="left"></span><span class="right"></span></div>
+            <div class="sword animation-left"><span class="handle"></span><span class="light"></span></div>
+        </div> -->
+
+        <!-- fin loader -->
+        <!-- buscador -->
+        <section class="searchHero d-flex justify-content-center">
+            <center>
+                <form id="formHero">
+                    <div class="form-floating mb-3 py-3">
+                        <input type="number" class="form-control" id="inputHero" placeholder="?" minlength="1"
+                            maxlength="3" data-bs-toggle="tooltip" data-bs-placement="right"
+                            data-bs-title="Elige un Hero desde el 1 al 732 " data-bs-custom-class="custom-tooltip">
+                        <!-- <label for="inputHero">Ingresa el número del SuperHero a buscar...</label> -->
+                    </div>
+                    <div class="wrapper-buttons">
+                        <button type="button" class="btn btn-lg btn-info text-white" onclick="findHero()"><i
+                                class="fa-brands fa-searchengin"></i> Buscar Héroe</button>
+                        <button type="reset" class="btn btn-lg btn-light" onclick="resetHero()"><i
+                                class="fa-solid fa-mask"></i>
+                            Nueva búsqueda</button>
+                    </div>
+                </form>
+            </center>
+        </section>
+        <!-- fin buscador -->
+        <!-- resultado buscador -->
+        <section class="py-3" id="result">
+            <div class="row py-3">
+                <!-- información superhero -->
+                <div class="col-12 col-md-6" class="infoSuperhero p-3">
+                    <div class="card bg-dark text-white" id="infoHero" style="height: 370px; width: 100%;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex">
+                                <img id="imgHero" src="" class="img-fluid rounded-start h-100 object-fit-contain">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-header">
+                                    <h2 class="text-center"><strong>* <span id="titleHero"></span> *</strong></h2>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li class="card-text">
+                                            Nombre: <span id="nameHero"></span>
+                                        </li>
+                                        <li class="card-text">
+                                            Alias: <span id="conHero"></span>
+                                        </li>
+                                        <li class="card-text">
+                                            Publicado por: <span id="pubHero"></span>
+                                        </li>
+                                        <li class="card-text">
+                                            Ocupación: <span id="occuHero"></span>
+                                        </li>
+                                        <li class="card-text">
+                                            Primera aparición: <span id="firstHero"></span>
+                                        </li>
+                                        <li class="card-text">
+                                            Altura: <span id="heiHero"></span>
+                                        </li>
+                                        <li class="card-text">
+                                            Peso: <span id="weiHero"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-light">
+                                    <p class="card-text text-end fst-italic"><small class="text-body-secondary">ID →
+                                            <strong><span id="idHero"></span></strong></small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- estadísticas superhero -->
+                <div class="col-12 col-md-6" class="statsSuperhero p-3">
+                    <div id="graficoHero" style="height: 370px; width: 100%;"></div>
+                </div>
+            </div>
+        </section>
+        <!-- fin resultado buscador -->
+    </main>
+    <footer class="pt-5">
+        <div class="row d-flex">
+            <div class="col-12 col-md-8 text-center p-0">
+                <div class="loader"></div>
+            </div>
+            <div class="col-12 col-md-4 text-center p-0">
+                <p class="textDeveloper">&copy; 2024 Developed with Power by <a href="https://github.com/esilvapellet" target="_blank"><img
+                            src="./assets/img/esteban.png" alt="Esteban Silva Pellet" class="imgDeveloper"></a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- fin footer -->
+    <!-- efecto de sonido -->
+    <audio autoplay>
+        <source src="./assets/sound/intro.mp3" type="audio/mp3">
+        Tu navegador no soporta el elementos de audio.
+    </audio>
+    <!-- modal alerta usuario -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalMensaje">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h3 class="modal-title badge text-bg-danger">¡ ATENCIÓN !</h3>
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center text-white">
+                    <p id="mensaje"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
