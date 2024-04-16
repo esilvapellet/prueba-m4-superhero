@@ -17,6 +17,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    box-shadow: inset 0 0 0 2000px rgb(3 3 3 / 5%);
 }
 
 nav {
@@ -24,12 +25,8 @@ nav {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgb(3 3 3 / 5%);
 }
-
-/* nav {
-    background-color: red;
-    background-color: #FCB020;
-} */
 
 .navbar-brand {
     text-decoration: none;
@@ -40,6 +37,15 @@ nav {
 h1 {
     font-family: "Bangers", system-ui;
     text-decoration: none;
+}
+
+.textNav {
+    color: #fcb020;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Pixelify Sans", sans-serif;
+    text-shadow: 2px 2px 4px black;
+    text-transform: uppercase;
 }
 
 .modal {
@@ -53,7 +59,6 @@ h1 {
 }
 
 h2 {
-    /* font-family: "Pixelify Sans", sans-serif; */
     font-family: "Bangers", system-ui;
     font-size: 50px;
 }
@@ -65,7 +70,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.textoPortada{
+.textoPortada {
     color: #FFF;
     font-family: "Space Mono", monospace;
     text-align: center;
@@ -73,13 +78,12 @@ h2 {
     background-color: #2aa9df;
 }
 
-.parche{
+.parche {
     color: #000;
     background-color: #FFF;
-    
+
 }
 
-/* font-family: "Comic Neue", cursive; */
 .row {
     display: none;
     margin: 0;
@@ -90,15 +94,27 @@ h2 {
     border: 5px solid black;
     width: 100%;
     font-family: "Bangers", system-ui;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 400px;
 }
 
-/* .searchHero {
-    display: inline-block;
+/* #graficoHero {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.canvasjs-chart-canvas {
+    max-height: 400px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
 
 } */
 
 #formHero {
-    /* width: 650px; */
     max-width: 100%;
 }
 
@@ -141,11 +157,11 @@ footer img {
     max-width: 100px;
 }
 
-.modal-title{
+.modal-title {
     font-size: 16px;
 }
 
-#mensaje{
+#mensaje {
     color: #FFF;
     font-size: 20px;
 }
@@ -159,14 +175,17 @@ footer img {
     /* zoom: 1.1; */
 }
 
-.textDeveloper:hover {
-    background-color: #000;
+.imgDeveloper {
+    background-color: #28AADF;
     /* zoom: 1.1; */
 }
 
+.textDeveloper:hover {
+    background-color: #000;
+}
+
 .imgDeveloper:hover {
-    background-color: #28AADF;
-    /* zoom: 1.1; */
+    background-color: red;
 }
 
 /* ocultar flechas input number */
@@ -1010,5 +1029,220 @@ a:hover {
     100% {
         transform: rotate(45deg) translateX(-45px);
         opacity: 0.7;
+    }
+}
+
+/* .svg-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    background-color: #fcb020;
+}
+
+.svg-content {
+    width: 40vw;
+} */
+
+.svg-container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: fixed;
+    z-index: 100;
+    background-color: #fcb020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .svg-content { 
+        width: 40vw;
+        padding: 50px;
+  }
+
+.st0 {
+    opacity: 0.37;
+}
+
+.st1 {
+    fill: none;
+}
+
+.st2 {
+    filter: url(#Adobe_OpacityMaskFilter);
+}
+
+.st3 {
+    fill: url(#SVGID_1_);
+}
+
+.st6 {
+    opacity: 0.37;
+}
+
+#dark {
+    animation: dark 4s infinite alternate linear;
+}
+
+
+@keyframes dark {
+    0% {
+        transform: translate(0px, 0px)
+    }
+
+    12.5% {
+        transform: translate(0px, -42.5px)
+    }
+
+    25% {
+        transform: translate(0px, -85px)
+    }
+
+    37.5% {
+        transform: translate(0px, -127.5px)
+    }
+
+    50% {
+        transform: translate(0px, -170px)
+    }
+
+    62.5% {
+        transform: translate(0px, -212.5px)
+    }
+
+    75% {
+        transform: translate(0px, -255px)
+    }
+
+    87.5% {
+        transform: translate(0px, -297.5px)
+    }
+
+    100% {
+        transform: translate(0px, -340px)
+    }
+}
+
+@keyframes light {
+    0% {
+        transform: translate(0px, 0px)
+    }
+
+    12.5% {
+        transform: translate(15px, -42.5px)
+    }
+
+    25% {
+        transform: translate(30px, -85px)
+    }
+
+    37.5% {
+        transform: translate(45px, -127.5px)
+    }
+
+    50% {
+        transform: translate(75px, -170px)
+    }
+
+    62.5% {
+        transform: translate(90px, -212.5px)
+    }
+
+    75% {
+        transform: translate(105px, -255px)
+    }
+
+    87.5% {
+        transform: translate(120px, -297.5px)
+    }
+
+    100% {
+        transform: translate(135px, -340px)
+    }
+}
+
+#shadow_dark {
+    animation: shadow_dark 4s infinite alternate linear;
+}
+
+
+
+@keyframes shadow_dark {
+    0% {
+        transform: translate(0px, 0px)
+    }
+
+    12.5% {
+        transform: translate(0px, 42.5px)
+    }
+
+    25% {
+        transform: translate(0px, 85px)
+    }
+
+    37.5% {
+        transform: translate(0px, 127.5px)
+    }
+
+    50% {
+        transform: translate(0px, 170px)
+    }
+
+    62.5% {
+        transform: translate(0px, 212.5px)
+    }
+
+    75% {
+        transform: translate(0px, 255px)
+    }
+
+    87.5% {
+        transform: translate(0px, 297.5px)
+    }
+
+    100% {
+        transform: translate(0px, 340px)
+    }
+}
+
+@keyframes shadow_light {
+    0% {
+        transform: translate(0px, 0px)
+    }
+
+    12.5% {
+        transform: translate(15px, 42.5px)
+    }
+
+    25% {
+        transform: translate(30px, 85px)
+    }
+
+    37.5% {
+        transform: translate(45px, 127.5px)
+    }
+
+    50% {
+        transform: translate(75px, 170px)
+    }
+
+    62.5% {
+        transform: translate(90px, 212.5px)
+    }
+
+    75% {
+        transform: translate(105px, 255px)
+    }
+
+    87.5% {
+        transform: translate(120px, 297.5px)
+    }
+
+    100% {
+        transform: translate(135px, 340px)
     }
 }

@@ -45,8 +45,8 @@ function obtenerData(hero) {
                 image: datos.image.url,
                 powerstats: dataPoints,
             };
-            cargarGrafico(personaje);
             cargarData(personaje);
+            cargarGrafico(personaje);
         })
         .fail(function () {
             alert("No fue posible cargar la información del Hero.");
@@ -65,12 +65,12 @@ function cargarGrafico(personaje = []) {
             margin: 15,
         },
         data: [{
-                type: "pie",
-                startAngle: 270,
-                toolTipContent: "<b>{label}</b> → {y}",
-                indexLabel: "{label} → {y}",
-                dataPoints: personaje.powerstats,
-            }],
+            type: "pie",
+            startAngle: 270,
+            toolTipContent: "<b>{label}</b> → {y}",
+            indexLabel: "{label} → {y}",
+            dataPoints: personaje.powerstats,
+        }],
     });
     chart.render();
 }
@@ -117,3 +117,10 @@ function cargarData(personaje) {
     document.getElementById("idHero").innerText = personaje.id;
 };
 
+function main() {
+    setTimeout(() => {
+        $(".svg-container").fadeOut(1200);
+    }, 3200)
+}
+
+main();
